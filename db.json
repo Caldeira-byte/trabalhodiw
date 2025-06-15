@@ -1,0 +1,184 @@
+{
+  "receitas": [
+    {
+      "id": 1,
+      "titulo": "Pão de Queijo",
+      "descricao": "Receita tradicional mineira, crocante por fora e macia por dentro.",
+      "categoria": "Lanches",
+      "tempoPreparo": 45,
+      "porcoes": 20,
+      "dificuldade": "Fácil",
+      "imagem": "assets/img/pao.webp",
+      "ingredientes": [
+        "500g de polvilho doce",
+        "1 xícara de leite",
+        "1/2 xícara de óleo",
+        "1 colher de chá de sal",
+        "2 ovos",
+        "200g de queijo minas ralado"
+      ],
+      "preparo": [
+        "Ferva o leite com óleo e sal",
+        "Despeje sobre o polvilho e misture bem",
+        "Deixe esfriar e adicione os ovos um a um",
+        "Adicione o queijo e misture",
+        "Faça bolinhas e asse a 180°C por 20 minutos"
+      ],
+      "dataCriacao": "2024-01-15T10:30:00Z",
+      "autor": "Maria Silva"
+    },
+    {
+      "id": 2,
+      "titulo": "Torta de Frango",
+      "descricao": "Uma torta cremosa e cheia de sabor para qualquer refeição.",
+      "categoria": "Almoço",
+      "tempoPreparo": 60,
+      "porcoes": 8,
+      "dificuldade": "Médio",
+      "imagem": "assets/img/torta-frango (1).jpg",
+      "ingredientes": [
+        "1 massa de torta pronta",
+        "500g de peito de frango",
+        "1 cebola picada",
+        "2 tomates picados",
+        "200ml de creme de leite",
+        "Sal e pimenta a gosto"
+      ],
+      "preparo": [
+        "Cozinhe e desfie o frango",
+        "Refogue a cebola e tomate",
+        "Misture o frango com o refogado e creme de leite",
+        "Coloque na massa e cubra",
+        "Asse a 180°C por 30 minutos"
+      ],
+      "dataCriacao": "2024-01-16T14:20:00Z",
+      "autor": "João Santos"
+    },
+    {
+      "id": 3,
+      "titulo": "Caprese de Berinjela",
+      "descricao": "Uma alternativa leve e deliciosa para vegetarianos.",
+      "categoria": "Janta",
+      "tempoPreparo": 30,
+      "porcoes": 4,
+      "dificuldade": "Fácil",
+      "imagem": "assets/img/caprese (1).jpg",
+      "ingredientes": [
+        "2 berinjelas grandes",
+        "300g de mussarela de búfala",
+        "4 tomates grandes",
+        "Manjericão fresco",
+        "Azeite extravirgem",
+        "Sal e pimenta a gosto"
+      ],
+      "preparo": [
+        "Corte a berinjela em fatias e grelhe",
+        "Corte o tomate e a mussarela em fatias",
+        "Monte intercalando berinjela, tomate e mussarela",
+        "Finalize com manjericão e azeite",
+        "Tempere com sal e pimenta"
+      ],
+      "dataCriacao": "2024-01-17T18:45:00Z",
+      "autor": "Ana Costa"
+    },
+    {
+      "id": 4,
+      "titulo": "Brigadeiro",
+      "descricao": "Doce brasileiro feito com leite condensado, chocolate e manteiga.",
+      "categoria": "Sobremesa",
+      "tempoPreparo": 20,
+      "porcoes": 30,
+      "dificuldade": "Fácil",
+      "imagem": "assets/img/brigadeiro.jpg",
+      "ingredientes": [
+        "1 lata de leite condensado",
+        "2 colheres de sopa de chocolate em pó",
+        "1 colher de sopa de manteiga",
+        "Chocolate granulado para cobrir"
+      ],
+      "preparo": [
+        "Misture todos os ingredientes em uma panela",
+        "Cozinhe em fogo baixo mexendo sempre",
+        "Quando desgrudar do fundo, está pronto",
+        "Deixe esfriar e faça bolinhas",
+        "Passe no chocolate granulado"
+      ],
+      "dataCriacao": "2024-01-18T16:10:00Z",
+      "autor": "Carlos Pereira"
+    },
+    {
+      "id": 5,
+      "titulo": "Macarrão com Carne",
+      "descricao": "Macarrão ao molho suculento com carne moída bem temperada.",
+      "categoria": "Almoço",
+      "tempoPreparo": 40,
+      "porcoes": 6,
+      "dificuldade": "Fácil",
+      "imagem": "assets/img/macarrao2.jpg",
+      "ingredientes": [
+        "500g de macarrão",
+        "500g de carne moída",
+        "1 cebola picada",
+        "3 dentes de alho",
+        "2 latas de molho de tomate",
+        "Queijo ralado a gosto"
+      ],
+      "preparo": [
+        "Cozinhe o macarrão al dente",
+        "Refogue a cebola e alho",
+        "Adicione a carne e deixe dourar",
+        "Acrescente o molho de tomate",
+        "Sirva sobre o macarrão com queijo"
+      ],
+      "dataCriacao": "2024-01-19T12:30:00Z",
+      "autor": "Lucia Oliveira"
+    },
+    {
+      "id": 6,
+      "titulo": "Lasanha Bolonhesa",
+      "descricao": "Clássica lasanha italiana com molho bolonhesa e queijo derretido.",
+      "categoria": "Janta",
+      "tempoPreparo": 90,
+      "porcoes": 8,
+      "dificuldade": "Médio",
+      "imagem": "assets/img/lasanha-nova.jpg",
+      "ingredientes": [
+        "1 pacote de massa de lasanha",
+        "500g de carne moída",
+        "1 cebola picada",
+        "3 dentes de alho",
+        "2 latas de molho de tomate",
+        "500g de queijo mussarela",
+        "200g de queijo parmesão",
+        "500ml de molho branco",
+        "Manjericão fresco",
+        "Sal e pimenta a gosto"
+      ],
+      "preparo": [
+        "Cozinhe a massa da lasanha al dente",
+        "Refogue cebola e alho, adicione a carne",
+        "Acrescente o molho de tomate e temperos",
+        "Prepare o molho branco",
+        "Monte em camadas: molho, massa, queijo",
+        "Repita as camadas até acabar os ingredientes",
+        "Cubra com queijo e asse por 45 minutos a 180°C"
+      ],
+      "dataCriacao": "2024-01-20T15:45:00Z",
+      "autor": "Chef Assistant"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Maria Silva",
+      "email": "maria@email.com",
+      "dataCadastro": "2024-01-10T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "nome": "João Santos",
+      "email": "joao@email.com",
+      "dataCadastro": "2024-01-12T10:15:00Z"
+    }
+  ]
+}

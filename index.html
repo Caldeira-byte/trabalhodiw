@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cozinha-ON</title>
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        />
+    </head>
+
+    <body>
+        <!-- Cabeçalho -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Cozinha-ON</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav me-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cadastro.html"
+                                    >Cadastro</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Contato.html"
+                                    >Contato</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Sobre.html">Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="visualizacao.html"
+                                    >Dados</a
+                                >
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="biblioteca.html"
+                                    >Biblioteca</a
+                                >
+                            </li>
+                        </ul>
+                        <form class="d-flex login">
+                            <input
+                                class="form-control me-2"
+                                type="email"
+                                placeholder="Email"
+                                required
+                            />
+                            <input
+                                class="form-control me-2"
+                                type="password"
+                                placeholder="Senha"
+                                required
+                            />
+                            <button class="btn btn-success" type="submit">
+                                Login
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- SLIDER PRINCIPAL -->
+        <div class="main-slider-container">
+            <button class="slider-btn prev-btn" onclick="mudarSlide(-1)">
+                ❮
+            </button>
+            <div class="main-slider">
+                <div class="main-slide">
+                    <a href="detalhes.html?id=1">
+                        <img
+                            src="assets/img/pao.webp"
+                            alt="Pão de Queijo"
+                            class="img-fluid"
+                        />
+                        <div class="slide-caption">
+                            <h3>Pão de Queijo</h3>
+                            <p>Receita tradicional mineira</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="main-slide">
+                    <a href="detalhes.html?id=2">
+                        <img
+                            src="assets/img/torta-frango (1).jpg"
+                            alt="Torta de Frango"
+                            class="img-fluid"
+                        />
+                        <div class="slide-caption">
+                            <h3>Torta de Frango</h3>
+                            <p>Clássico da culinária brasileira</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="main-slide">
+                    <a href="detalhes.html?id=3">
+                        <img
+                            src="assets/img/caprese (1).jpg"
+                            alt="Caprese de Berinjela"
+                            class="img-fluid"
+                        />
+                        <div class="slide-caption">
+                            <h3>Caprese de Berinjela</h3>
+                            <p>Opção vegetariana deliciosa</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="slider-btn next-btn" onclick="mudarSlide(1)">
+                ❯
+            </button>
+            <div class="slider-nav">
+                <div class="slider-dot active" onclick="irParaSlide(0)"></div>
+                <div class="slider-dot" onclick="irParaSlide(1)"></div>
+                <div class="slider-dot" onclick="irParaSlide(2)"></div>
+            </div>
+        </div>
+
+        <!-- Receitas do dia -->
+        <div class="container mt-4">
+            <img class="destaque d-block mx-auto" src="assets/img/Cozinha on.jpg" alt="" />
+
+            <!-- Campo de Pesquisa -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="campoPesquisa"
+                            placeholder="Pesquisar receitas por título ou descrição..."
+                        />
+                        <button
+                            class="btn btn-success"
+                            type="button"
+                            id="btnPesquisar"
+                        >
+                            🔍 Pesquisar
+                        </button>
+                        <button
+                            class="btn btn-outline-secondary"
+                            type="button"
+                            id="btnLimpar"
+                        >
+                            Limpar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <main class="row justify-content-center" id="receitas-container">
+                <!-- Cards serão adicionados via app.js com fetch -->
+            </main>
+
+            <!-- Slider de receitas relacionadas -->
+            <section class="slider-receitas">
+                <h2 class="text-center text-light mb-4">
+                    Mais Receitas para Experimentar
+                </h2>
+                <div class="slider-container" id="slider-relacionadas">
+                    <!-- Conteúdo dinâmico futuro -->
+                </div>
+            </section>
+
+            <!-- Seção do Autor -->
+            <section class="autor-section bg-dark text-light p-4 rounded mt-5">
+                <div class="row align-items-center">
+                    <div class="col-md-3 text-center">
+                        <img
+                            src="assets/img/gabriel-foto.png"
+                            alt="Foto do Desenvolvedor"
+                            class="rounded-circle mb-3"
+                            style="width: 150px; height: 150px"
+                        />
+                    </div>
+                    <div class="col-md-9">
+                        <h3 class="text-success">👨‍💻 Sobre o Desenvolvedor</h3>
+                        <h4>Gabriel Caldeira</h4>
+                        <p class="lead">
+                            Estudante de Ciências Da Computação na PUC Minas
+                        </p>
+                        <p>
+                            Apaixonado por desenvolvimento web e culinária,
+                            criou o Cozinha-ON para unir tecnologia e
+                            gastronomia. Turma: 2025/1 - Desenvolvimento de
+                            Interfaces Web
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="text-light me-3"
+                                >📧 gabriellimaemerique6@gmail.com</a
+                            >
+                            <a href="#" class="text-light me-3"
+                                >📱 https://github.com/Caldeira-byte</a
+                            >
+                            <a href="#" class="text-light">💼 LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Barra lateral -->
+        <aside
+            class="bg-dark text-light p-3 rounded position-fixed top-50 end-0 translate-middle-y d-none d-md-block"
+        >
+            <h3 class="text-center">CATEGORIAS</h3>
+            <ul class="list-unstyled">
+                <li><a class="text-light" href="Café.html">Café</a></li>
+                <li><a class="text-light" href="Almoço.html">Almoço</a></li>
+                <li><a class="text-light" href="Janta.html">Janta</a></li>
+                <li><a class="text-light" href="Lanches.html">Lanches</a></li>
+                <li>
+                    <a class="text-light" href="Sobremesa.html">Sobremesa</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Rodapé -->
+        <footer class="bg-dark text-center text-light p-3 mt-5">
+            <h4>CIE SINCE 2018. TODOS OS DIREITOS RESERVADOS©</h4>
+            <article class="titulo-pesquisa">Procure aqui uma receita!</article>
+            <form class="d-flex justify-content-center">
+                <input
+                    class="form-control w-50"
+                    type="text"
+                    placeholder="Pesquisar..."
+                    name="pesquisa"
+                />
+                <button class="btn btn-success ms-2" type="submit">
+                    Pesquisar
+                </button>
+            </form>
+            <a href="detalhes.html" class="btn btn-outline-light mt-3"
+                >Mais sobre o site</a
+            >
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/scripts/app.js"></script>
+        <script src="assets/scripts/slider.js"></script>
+
+        <!-- Script do slider -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const mainSlider = document.querySelector(".main-slider");
+                const slides = document.querySelectorAll(".main-slide");
+                const dots = document.querySelectorAll(
+                    ".main-slider-container .slider-dot",
+                );
+                let currentSlide = 0;
+                const totalSlides = slides.length;
+                let autoSlideInterval;
+
+                function showSlide(index) {
+                    mainSlider.style.transform = `translateX(-${index * 100}%)`;
+                    dots.forEach((dot, i) =>
+                        dot.classList.toggle("active", i === index),
+                    );
+                    currentSlide = index;
+                }
+
+                function startAutoSlide() {
+                    autoSlideInterval = setInterval(() => {
+                        currentSlide = (currentSlide + 1) % totalSlides;
+                        showSlide(currentSlide);
+                    }, 4000);
+                }
+
+                function stopAutoSlide() {
+                    clearInterval(autoSlideInterval);
+                }
+
+                // Funções globais para os botões
+                window.mudarSlide = function (direction) {
+                    stopAutoSlide();
+                    currentSlide += direction;
+                    if (currentSlide >= totalSlides) currentSlide = 0;
+                    if (currentSlide < 0) currentSlide = totalSlides - 1;
+                    showSlide(currentSlide);
+                    startAutoSlide();
+                };
+
+                window.irParaSlide = function (index) {
+                    stopAutoSlide();
+                    showSlide(index);
+                    startAutoSlide();
+                };
+
+                // Iniciar carrossel automático
+                startAutoSlide();
+            });
+        </script>
+    </body>
+</html>

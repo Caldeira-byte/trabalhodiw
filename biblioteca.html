@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Chart.js - Cozinha-ON</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .demo-chart {
+            height: 300px;
+            margin: 20px 0;
+        }
+        
+        .code-block {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .chart-type {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🍳 Cozinha-ON</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="index.html">Início</a>
+                <a class="nav-link" href="cadastro.html">Cadastrar</a>
+                <a class="nav-link" href="visualizacao.html">Dados</a>
+                <a class="nav-link active" href="biblioteca.html">Biblioteca</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h1>📊 Chart.js</h1>
+            <p class="lead">Biblioteca JavaScript para criar gráficos dinâmicos e interativos</p>
+            <p>Utilizada no sistema Cozinha-ON para visualização de dados de receitas</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <!-- Sobre a Biblioteca -->
+        <div class="feature-card">
+            <h2>🎯 Sobre a Chart.js</h2>
+            <p>Chart.js é uma biblioteca JavaScript de código aberto que permite criar gráficos responsivos e animados de forma simples e eficiente. É uma das bibliotecas mais populares para visualização de dados na web.</p>
+            
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <h5>✨ Fácil de Usar</h5>
+                    <p>API simples e intuitiva para criar gráficos rapidamente</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>📱 Responsivo</h5>
+                    <p>Gráficos que se adaptam automaticamente a diferentes tamanhos de tela</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>🎨 Personalizável</h5>
+                    <p>Amplas opções de customização para cores, animações e estilos</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tipos de Gráficos Implementados -->
+        <h2 class="text-center my-5">📈 Tipos de Gráficos Implementados</h2>
+
+        <!-- Gráfico de Pizza -->
+        <div class="chart-type">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>🥧 Gráfico de Pizza (Doughnut)</h3>
+                    <p><strong>Uso no projeto:</strong> Visualizar a distribuição de receitas por categoria culinária</p>
+                    <p><strong>Vantagens:</strong></p>
+                    <ul>
+                        <li>Ideal para mostrar proporções</li>
+                        <li>Fácil interpretação visual</li>
+                        <li>Destaque para categoria dominante</li>
+                    </ul>
+                    
+                    <div class="code-block">
+                        <strong>Exemplo de implementação:</strong>
+                        <pre><code>new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Doces', 'Salgados', 'Bebidas'],
+        datasets: [{
+            data: [10, 20, 5],
+            backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+        }]
+    }
+});</code></pre>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <canvas id="demoPizza" class="demo-chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico de Barras -->
+        <div class="chart-type">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>📊 Gráfico de Barras</h3>
+                    <p><strong>Uso no projeto:</strong> Mostrar quantidade de receitas por tempo de preparo</p>
+                    <p><strong>Vantagens:</strong></p>
+                    <ul>
+                        <li>Comparação fácil entre categorias</li>
+                        <li>Excelente para dados categóricos</li>
+                        <li>Escalas claras e precisas</li>
+                    </ul>
+                    
+                    <div class="code-block">
+                        <strong>Exemplo de implementação:</strong>
+                        <pre><code>new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Até 30min', '31-60min', '1-2h'],
+        datasets: [{
+            data: [15, 12, 8],
+            backgroundColor: ['#19db6a', '#36A2EB', '#FFCE56']
+        }]
+    }
+});</code></pre>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <canvas id="demoBarra" class="demo-chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráfico de Linha -->
+        <div class="chart-type">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>📈 Gráfico de Linha</h3>
+                    <p><strong>Uso no projeto:</strong> Distribuição de receitas por número de porções</p>
+                    <p><strong>Vantagens:</strong></p>
+                    <ul>
+                        <li>Mostra tendências e padrões</li>
+                        <li>Ideal para dados contínuos</li>
+                        <li>Visualização de progressão</li>
+                    </ul>
+                    
+                    <div class="code-block">
+                        <strong>Exemplo de implementação:</strong>
+                        <pre><code>new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['1-2 pessoas', '3-4 pessoas', '5-8 pessoas'],
+        datasets: [{
+            data: [8, 18, 10],
+            borderColor: '#0066cc',
+            backgroundColor: 'rgba(0, 102, 204, 0.1)',
+            fill: true
+        }]
+    }
+});</code></pre>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <canvas id="demoLinha" class="demo-chart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recursos Utilizados -->
+        <div class="feature-card">
+            <h2>🛠️ Recursos da Chart.js Utilizados no Projeto</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>🎨 Personalização Visual</h5>
+                    <ul>
+                        <li>Cores personalizadas para cada categoria</li>
+                        <li>Bordas e sombras nos gráficos</li>
+                        <li>Legendas posicionadas estrategicamente</li>
+                    </ul>
+                    
+                    <h5>📱 Responsividade</h5>
+                    <ul>
+                        <li>Gráficos que se adaptam ao tamanho da tela</li>
+                        <li>Proporções mantidas em diferentes dispositivos</li>
+                        <li>Interface otimizada para mobile</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>🎯 Tooltips Interativos</h5>
+                    <ul>
+                        <li>Informações detalhadas ao passar o mouse</li>
+                        <li>Percentuais calculados dinamicamente</li>
+                        <li>Formatação personalizada dos dados</li>
+                    </ul>
+                    
+                    <h5>⚡ Performance</h5>
+                    <ul>
+                        <li>Renderização eficiente com Canvas</li>
+                        <li>Atualizações dinâmicas dos dados</li>
+                        <li>Carregamento rápido dos gráficos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center my-5">
+            <h3>🚀 Veja os Gráficos em Ação!</h3>
+            <p>Explore a visualização completa dos dados de receitas do sistema Cozinha-ON</p>
+            <a href="visualizacao.html" class="btn btn-success btn-lg">📊 Ver Visualização de Dados</a>
+            <a href="cadastro.html" class="btn btn-primary btn-lg ms-3">➕ Cadastrar Receitas</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Criar gráficos demonstrativos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gráfico de Pizza Demo
+            const ctxPizza = document.getElementById('demoPizza').getContext('2d');
+            new Chart(ctxPizza, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Doces', 'Salgados', 'Bebidas', 'Massas'],
+                    datasets: [{
+                        data: [12, 19, 8, 15],
+                        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'],
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Barras Demo
+            const ctxBarra = document.getElementById('demoBarra').getContext('2d');
+            new Chart(ctxBarra, {
+                type: 'bar',
+                data: {
+                    labels: ['Até 30min', '31-60min', '1-2 horas', 'Mais de 2h'],
+                    datasets: [{
+                        label: 'Receitas',
+                        data: [15, 12, 8, 3],
+                        backgroundColor: ['#19db6a', '#36A2EB', '#FFCE56', '#FF6384'],
+                        borderWidth: 2,
+                        borderRadius: 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Gráfico de Linha Demo
+            const ctxLinha = document.getElementById('demoLinha').getContext('2d');
+            new Chart(ctxLinha, {
+                type: 'line',
+                data: {
+                    labels: ['1-2 pessoas', '3-4 pessoas', '5-8 pessoas', '8+ pessoas'],
+                    datasets: [{
+                        label: 'Receitas por Porções',
+                        data: [8, 18, 12, 6],
+                        borderColor: '#0066cc',
+                        backgroundColor: 'rgba(0, 102, 204, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4,
+                        pointBackgroundColor: '#0066cc',
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        pointRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

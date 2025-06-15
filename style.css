@@ -1,0 +1,556 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(6, 56, 33);
+    margin: 0;
+    padding: 0;
+    padding-top: 70px; /* Espaço para a navbar fixa */
+}
+
+/* Estiliza o menu de navegação usando Bootstrap */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(43, 56, 46);
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* CONTROLE ESPECÍFICO DA LOGO */
+.navbar-brand img {
+    width: 120px;
+    height: auto;
+    max-height: 40px;
+}
+
+/* Estiliza o formulário de login com Bootstrap */
+.login {
+    background: white;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login input {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid rgb(43, 56, 46);
+    border-radius: 5px;
+}
+
+.login button {
+    padding: 8px 15px;
+    background: rgb(43, 56, 46);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login button:hover {
+    background: rgb(25, 219, 106);
+}
+
+/* SLIDER PRINCIPAL (NOVO) */
+.main-slider-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 70px auto 30px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background-color: rgb(43, 56, 46);
+}
+
+.main-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 400px;
+}
+
+.main-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.main-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.slide-caption h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: rgb(25, 219, 106);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.slide-caption p {
+    font-size: 1.2rem;
+    margin: 0;
+    color: white;
+}
+
+.slider-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.slider-dot.active {
+    background-color: rgb(25, 219, 106);
+}
+
+/* PADRÃO PARA IMAGENS DE RECEITAS INDIVIDUAIS */
+.receita-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: 3px solid rgb(25, 219, 106);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+/* Estilização das receitas com Bootstrap */
+.receitas-principais {
+    background-color: rgb(43, 56, 46);
+    width: 75%;
+    margin: 40px auto 20px;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+
+.receitas-principais img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+
+/* IMAGEM DE DESTAQUE (HOME) - CIRCULAR */
+.destaque {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgb(25, 219, 106);
+    display: block;
+    margin: 20px auto;
+}
+
+/* Barra lateral usando Bootstrap */
+aside {
+    width: 200px;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-top: 20px;
+    background-color: rgb(43, 56, 46);
+    border-radius: 16px;
+}
+
+.categorias {
+    padding: 20px;
+    font-size: x-large;
+    text-align: center;
+}
+
+/* Barra de pesquisa */
+form {
+    margin: 30px;
+}
+
+.titulo-pesquisa {
+    color: rgb(25, 219, 106);
+    font-size: xx-large;
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    background-color: rgb(43, 56, 46);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* SLIDER DE RECEITAS RELACIONADAS (original) */
+.slider-receitas {
+    background-color: rgb(43, 56, 46);
+    border-radius: 16px;
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 25px;
+    padding-bottom: 15px;
+    scrollbar-width: none;
+}
+
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.receita-slide {
+    min-width: 250px;
+    scroll-snap-align: start;
+    transition: transform 0.3s;
+}
+
+.receita-slide:hover {
+    transform: translateY(-5px);
+}
+
+.receita-slide img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgb(25, 219, 106);
+}
+
+.receita-slide h4 {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Animações e transições suaves */
+img {
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.btn, .login button {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover, .login button:hover {
+    transform: scale(1.05);
+}
+
+nav ul li a, aside ul li a {
+    transition: background 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover, aside ul li a:hover {
+    transform: translateX(5px);
+    background: rgb(60, 80, 60);
+}
+
+/* Responsividade com Bootstrap */
+@media (max-width: 768px) {
+    .main-slider-container {
+        margin-top: 60px;
+    }
+
+    .main-slider {
+        height: 300px;
+    }
+
+    .slide-caption h3 {
+        font-size: 1.5rem;
+    }
+
+    .slide-caption p {
+        font-size: 1rem;
+    }
+
+    .receitas-principais {
+        width: 90%;
+        padding: 15px;
+    }
+
+    aside {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Ajuste para imagens em mobile */
+    .receita-container img {
+        max-width: 250px;
+    }
+
+    .destaque {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-slider {
+        height: 250px;
+    }
+
+    .slide-caption {
+        padding: 10px;
+    }
+
+    .slide-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .slide-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ESTILOS PARA PÁGINA DE CADASTRO */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: rgb(25, 219, 106);
+    box-shadow: 0 0 0 0.2rem rgba(25, 219, 106, 0.25);
+}
+
+.btn-success {
+    background-color: rgb(25, 219, 106);
+    border-color: rgb(25, 219, 106);
+}
+
+.btn-success:hover {
+    background-color: rgb(20, 180, 85);
+    border-color: rgb(20, 180, 85);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(25, 219, 106, 0.1);
+}
+
+.badge {
+    font-size: 0.8em;
+    padding: 0.4em 0.8em;
+}
+
+/* Responsividade para cadastro */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+
+    .btn-sm {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Adicione seus estilos personalizados aqui */
+
+/* Estilos para o sistema CRUD */
+.alert {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn-group .btn {
+    margin-right: 2px;
+}
+
+.btn-sm {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+}
+
+.badge {
+    font-size: 0.7em;
+}
+
+/* Responsividade para a tabela */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+}
+
+/* Estilos para favoritos */
+.card.favorito {
+    border: 2px solid #28a745;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.btn-favorito {
+    border: none !important;
+    background: none !important;
+    transition: transform 0.2s;
+}
+
+.btn-favorito:hover {
+    transform: scale(1.2);
+}
+
+/* Seção do autor */
+.autor-section {
+    background: linear-gradient(135deg, #343a40 0%, #495057 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.autor-section h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #28a745 !important;
+}
+
+/* Campo de pesquisa */
+.input-group .form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Badges das receitas */
+.badge {
+    font-size: 0.75em;
+}
+
+/* Animação para cards */
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Botões do slider */
+.main-slider-container {
+    position: relative;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(40, 167, 69, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: rgba(40, 167, 69, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.slider-dot {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-dot:hover {
+    transform: scale(1.2);
+    background-color: #28a745;
+}: 2px;
+    }
+}
